@@ -5,7 +5,8 @@ class Math
 	
 	public function showHipotenusa($catetoAdj, $catetoOp)
 	{
-		return sqrt(($catetoAdj * $catetoAdj) + ($catetoOp * $catetoOp));	
+		hipo = sqrt (($catetoAdj * $catetoAdj) + ($catetoOp * $catetoOp));
+		return hipo;	
 	
 	}
 
