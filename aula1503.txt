@@ -1,0 +1,4 @@
+Não estou conseguindo chamar as páginas em .js
+Estou perdido em javascript...
+Achei vários códigos na internet mas não consegui 
+fazer funcionar.
