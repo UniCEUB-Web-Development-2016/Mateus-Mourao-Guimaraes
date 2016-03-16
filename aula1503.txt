@@ -1,4 +1,4 @@
-N„o estou conseguindo chamar as p·ginas em .js
+N√£o estou conseguindo chamar as p√°ginas .js
 Estou perdido em javascript...
-Achei v·rios cÛdigos na internet mas n„o consegui 
+Achei v√°rios c√≥digos na internet mas n√£o consegui 
 fazer funcionar.
