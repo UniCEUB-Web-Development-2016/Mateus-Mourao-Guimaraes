@@ -1,0 +1,224 @@
+Powered by Matthew
+
+Ex1. Aqui estou analisando o REST comparando com o código e o banco apresentado.
+ERRO FATAL
+Tá TUDO ERRADO
+REFAZER do ZEEEEEEEERO.!!
+
+[GETS]
+
+http://localhost/ProjectSeries/series
+Notice: Undefined offset: 3 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 16
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 30
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\SeriesController.php on line 50
+
+-------------------------------------------------------------------------
+
+http://localhost/ProjectSeries/series/game%20of%20thrones/
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 30
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\SeriesController.php on line 50
+
+-------------------------------------------------------------------------
+
+http://localhost/ProjectSeries/series/?year=
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\SeriesController.php on line 50
+
+-------------------------------------------------------------------------
+
+http://localhost/ProjectSeries/user/
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 30
+
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\UserController.php on line 53
+
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/user/1
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 22
+
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\UserController.php on line 50
+
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/user/1/series
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 46
+
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\UserController.php on line 51
+
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/episode/?
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 45
+
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\UserController.php on line 34
+
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/lista/iduser/    
+Notice: Undefined offset: 1 in C:\xampp\htdocs\ProjectSeries\control\RequestController.php on line 23
+
+Fatal error: Call to a member function fetchAll() on boolean in C:\xampp\htdocs\ProjectSeries\control\UserController.php on line 15
+
+-------------------------------------------------------------------------
+
+
+
+
+[POSTS]
+http://localhost/ProjectSeries/user/?<parameters>
+
+Status: OK
+
+Descrição: OK
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/lista/?<parameters>
+
+Status: OK
+
+Descrição: OK
+
+
+
+
+
+[PUT]
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/user/?<parameters>
+METHOD NOT FOUND
+
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/episode/?<parameters>    
+METHOD NOT FOUND
+
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/lista/?<parameters>    
+METHOD NOT FOUND
+-------------------------------------------------------------------------
+
+
+
+
+
+
+
+[DELETE]
+http://localhost/ProjectSeries/user/?<email>
+
+Status: OK
+
+Descrição: OK
+-------------------------------------------------------------------------
+http://localhost/ProjectSeries/lista/?<location>
+
+Status: OK
+
+Descrição: OK
+
+
+
+
+
+
+
+
+
+_____________________________________________________________________________________________________________
+Ex2. Aqui estou testando os POSTS e GETS que estão relacionados ao código e banco via Chrome, código do colega chamado Agnaldo.
+
+Ex2.1. POST
+
+A = User
+
+a1.Requisição:SEM ERRO
+http://localhost/ProjectSeries/user/?firstName=Agnaldo&
+lastName=Filho&email=agnaldo.filho@live.com&birthDate=1993-03-12&city=Brasilia&state=DF&password=123
+
+a1.Status:
+OK
+
+a1.Descrição:
+OK
+
+
+a2.Requisição:COM ERRO
+http://localhost/ProjectSeries/user/?lastName=Filho&email=agnaldo.filho@live.com
+&birthDate=1993-03-12&city=Brasilia&state=DF&password=123
+
+a2.Status:
+Postou com erro sem o nome, defeito no isValid
+
+a2.Descrição:
+Postou com erro sem o nome, defeito no isValid
+------------------------------------------------------------------------------------
+
+B = lista
+
+b1.Requisição: SEM ERRO
+http://localhost/ProjectSeries/lista/?series_name=Arrow&season=3&episode=20&location=5
+
+b1.Status:
+OK
+
+b1.Descrição
+OK
+
+b2.Requisição: COM ERRO
+http://localhost/ProjectSeries/lista/?season=3&episode=20&location=5
+
+b2.Status:
+OK
+
+b2.Descrição
+OK
+________________________________________________________________________________________
+
+
+Ex.2.2
+Get
+
+a = Series
+a.Requisição
+http://localhost/ProjectSeries/series/?director=
+http://localhost/ProjectSeries/series/?year_series=
+http://localhost/ProjectSeries/series/?initials=
+http://localhost/ProjectSeries/series/?cod_series=
+http://localhost/ProjectSeries/series/?category=
+http://localhost/ProjectSeries/series/?name_series=
+a.Status
+OK
+
+a.Descrição
+OK
+
+
+---------------------------------------------------
+b = Lista
+b.Requisição
+http://localhost/ProjectSeries/lista/?series_name=
+http://localhost/ProjectSeries/lista/?season=
+http://localhost/ProjectSeries/lista/?episode=
+http://localhost/ProjectSeries/lista/?location=
+
+
+b.Status
+OK
+
+b.Descrição
+OK
+
+-------------------------------------------------
+C = User
+c.Requisição
+http://localhost/ProjectSeries/user/?firstName=
+http://localhost/ProjectSeries/user/?lastName=
+http://localhost/ProjectSeries/user/?email=
+http://localhost/ProjectSeries/user/?birthDate=
+http://localhost/ProjectSeries/user/?city=
+http://localhost/ProjectSeries/user/?state=
+http://localhost/ProjectSeries/user/?pass=
+
+
+
+c.Status
+OK
+
+c.Descrição
+OK
+
+
+
