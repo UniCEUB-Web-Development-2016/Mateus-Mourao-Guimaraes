@@ -1,0 +1,16 @@
+<?php
+include('../usuariopag/httpful.phar');
+$url = "http://localhost:81/TorrentMStreaming/user/?first_name=".$_POST['first_name']."&last_name=".$_POST['last_name']."&email=".$_POST['email']."&birthdate=".$_POST['birthdate']."&phone=".$_POST['phone']."&password=".$_POST['password'];
+$response = \Httpful\Request::put($url)                  // Build a PUT request...
+              // Build a PUT request...
+->sendsJson()                               // tell it we're sending (Content-Type) JSON...
+->authenticateWith('first_name', 'email')  // authenticate with basic auth...
+->body('{"json":"is awesome"}')             // attach a body/payload...
+->send();
+
+echo "<script type='text/javascript'>window.alert('Atualizado com sucesso!');</script>";
+echo '<meta HTTP-EQUIV="Refresh" CONTENT="1; URL=http://localhost:81/client/usuariopag/AlterarUsuario.php">';
+
+exit;
+
+
