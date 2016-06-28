@@ -1,0 +1,50 @@
+body{
+    padding-top:50px;
+    text-align:center;
+
+}
+p{
+    font-size:120%;
+    margin:auto;
+    text-align:justify;
+}
+main div{
+    width: 720px;
+    margin: auto;
+    text-align:center;
+    text-decoration:none;
+}
+.principal2{
+    padding: 170px 15px;
+    text-align: center;
+
+}
+
+.principal{
+    padding: 60px 15px;
+    text-align: center;
+    margin-right:300px;
+    margin-left:300px;
+}
+.tableListagem{
+    border-collapse: collapse;
+    border: 1px solid black;
+
+}
+.tableListagem th{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    color: #000000;
+    font-family: sans-serif;
+    font-size:16px;
+}
+
+.tableListagem td{
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    padding: 5px 5px 5px 5px;
+    color: black;
+    font-family: sans-serif;
+    font-size:12px;
+}
